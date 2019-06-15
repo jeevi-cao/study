@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2f87acac-918f-47af-aa25-b28705c67a33" name="lnmp" url="http://192.168.197.12">
+        <fileTransfer host="192.168.197.12" port="22" rootFolder="/home/wwwroot/default" accessType="SFTP" password="df9bdf9bdf9bdf9adf9adf9ddf98df9adf99" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

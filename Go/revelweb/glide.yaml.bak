@@ -1,0 +1,7 @@
+package: .
+vcs: git
+import:
+- package: github.com/revel/cmd
+  version: ~0.21.1
+  subpackages:
+  - revel
