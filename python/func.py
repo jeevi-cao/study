@@ -11,7 +11,6 @@ def calc(*number):
 	sum = 0
 	for n in number:
 	 sum = sum + n
-	 
 	return sum
 
 sum = calc(1,2,3,4,5,6)	
