@@ -26,6 +26,5 @@ func main() {
 		fmt.Printf("diff second: %d \n", (ts1 - ts0))
 		fmt.Print("Timeout! \n")
 	}
-
 	fmt.Println("over! \n")
 }

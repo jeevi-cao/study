@@ -30,5 +30,6 @@ func main() {
 	}
 
 	var home = c["contact"].([]interface{})[0].(map[string]interface{})["home"].(string)
+	_ = home
 
 }
