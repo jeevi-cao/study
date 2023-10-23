@@ -1,0 +1,1 @@
+ERROR: 2018/05/28 20:55:54 log2.go:45: Something has failed
