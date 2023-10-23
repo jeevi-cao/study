@@ -9,7 +9,7 @@ if __name__ == '__main__':
     headers = {"RtaId": "4", "Content-Type": "application/json"}
     ts = str(int(time.time()))
     headers["Time"] = ts
-    auth = "4f273b5e2b5c8f6cb" + ts
+    auth = "" + ts
     headers["Authorization"] = hashlib.md5(bytes(auth.encode(encoding="utf-8"))).hexdigest()
     # OuterTargetId RTA_ID 从 clo 后台查询
     data = {"data": {"Size": 100, "Page": 1, "OuterTargetId": "3603004"}}
