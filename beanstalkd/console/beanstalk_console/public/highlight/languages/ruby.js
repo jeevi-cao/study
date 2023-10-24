@@ -6,7 +6,7 @@ Contributors: Peter Leonov <gojpeg@yandex.ru>, Vasily Polovnyov <vast@whiteants.
 
 function(hljs) {
   var RUBY_IDENT_RE = '[a-zA-Z_][a-zA-Z0-9_]*(\\!|\\?)?';
-  var RUBY_METHOD_RE = '[a-zA-Z_]\\w*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?';
+  var RUBY_METHOD_RE = '[a-zA-Z_]\\webp*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?';
   var RUBY_KEYWORDS = {
     keyword:
       'and false then defined module in return redo if BEGIN retry end for true self when ' +
@@ -169,7 +169,7 @@ function(hljs) {
       contains: [
         {
           className: 'title',
-          begin: '[A-Za-z_]\\w*(::\\w+)*(\\?|\\!)?',
+          begin: '[A-Za-z_]\\webp*(::\\webp+)*(\\?|\\!)?',
           relevance: 0
         },
         {
@@ -185,7 +185,7 @@ function(hljs) {
     FUNCTION,
     {
       className: 'constant',
-      begin: '(::)?([A-Z]\\w*(::)?)+',
+      begin: '(::)?([A-Z]\\webp*(::)?)+',
       relevance: 0
     },
     {
@@ -201,11 +201,11 @@ function(hljs) {
     },
     {
       className: 'number',
-      begin: '\\?\\w'
+      begin: '\\?\\webp'
     },
     {
       className: 'variable',
-      begin: '(\\$\\W)|((\\$|\\@\\@?)(\\w+))'
+      begin: '(\\$\\W)|((\\$|\\@\\@?)(\\webp+))'
     },
     IDENTIFIER,
     { // regexp container

@@ -43,7 +43,7 @@ function(hljs) {
           contains: [
             {
               className: 'title',
-              begin: '([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*'
+              begin: '([_a-zA-Z]\\webp*\\.)*([_a-zA-Z]\\webp*:)?[_a-zA-Z]\\webp*'
             },
             {
               className: 'params',

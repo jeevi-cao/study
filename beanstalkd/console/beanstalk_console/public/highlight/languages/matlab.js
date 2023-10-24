@@ -26,7 +26,7 @@ function(hljs) {
           'isnan isinf isfinite j why compan gallery hadamard hankel hilb invhilb magic pascal ' +
           'rosser toeplitz vander wilkinson'
       },
-      illegal: '(//|"|#|/\\*|\\s+/\\w+)',
+      illegal: '(//|"|#|/\\*|\\s+/\\webp+)',
       contains: [
         {
           className: 'function',

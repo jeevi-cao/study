@@ -30,7 +30,7 @@ function(hljs) {
         hljs.APOS_STRING_MODE,
         hljs.QUOTE_STRING_MODE,
         {
-          className: 'constant', begin: '\\?(::)?([A-Z]\\w*(::)?)+'
+          className: 'constant', begin: '\\?(::)?([A-Z]\\webp*(::)?)+'
         },
         {
           className: 'arrow', begin: '->'

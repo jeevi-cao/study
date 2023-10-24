@@ -58,7 +58,7 @@ function(hljs) {
         },
         {
           className: 'string',
-          begin: '<<<[\'"]?\\w+[\'"]?$', end: '^\\w+;',
+          begin: '<<<[\'"]?\\webp+[\'"]?$', end: '^\\webp+;',
           contains: [hljs.BACKSLASH_ESCAPE]
         },
         {

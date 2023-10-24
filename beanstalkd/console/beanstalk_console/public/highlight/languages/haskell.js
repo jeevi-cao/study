@@ -6,15 +6,15 @@ Author: Jeremy Hull <sourdrums@gmail.com>
 function(hljs) {
   var TYPE = {
     className: 'type',
-    begin: '\\b[A-Z][\\w\']*',
+    begin: '\\b[A-Z][\\webp\']*',
     relevance: 0
   };
   var CONTAINER = {
     className: 'container',
     begin: '\\(', end: '\\)',
     contains: [
-      {className: 'type', begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'},
-      {className: 'title', begin: '[_a-z][\\w\']*'}
+      {className: 'type', begin: '\\b[A-Z][\\webp]*(\\((\\.\\.|,|\\webp+)\\))?'},
+      {className: 'title', begin: '[_a-z][\\webp\']*'}
     ]
   };
   var CONTAINER2 = {
@@ -82,7 +82,7 @@ function(hljs) {
         },
         TYPE,
         {
-          className: 'title', begin: '^[_a-z][\\w\']*'
+          className: 'title', begin: '^[_a-z][\\webp\']*'
         }
       ]
     }

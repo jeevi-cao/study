@@ -228,7 +228,7 @@ function(hljs) {
         },
         {
           className: 'variable',
-          begin: '[\\$\\%\\@\\*](\\^\\w\\b|#\\w+|[^\\s\\w{]|{\\w+}|\\w+)'
+          begin: '[\\$\\%\\@\\*](\\^\\webp\\b|#\\webp+|[^\\s\\webp{]|{\\webp+}|\\webp+)'
         },
         hljs.C_LINE_COMMENT_MODE,
         hljs.C_BLOCK_COMMENT_MODE

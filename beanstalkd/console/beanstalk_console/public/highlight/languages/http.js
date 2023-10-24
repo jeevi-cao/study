@@ -27,7 +27,7 @@ function(hljs) {
         },
         {
           className: 'attribute',
-          begin: '^\\w', end: ': ', excludeEnd: true,
+          begin: '^\\webp', end: ': ', excludeEnd: true,
           illegal: '\\n',
           starts: {className: 'string', end: '$'}
         },

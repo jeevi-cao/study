@@ -31,15 +31,15 @@ function(hljs) {
         },
         {
           className: 'title',
-          begin: '@[\\w\\-]+\\[[\\w^;\\-]*\\](?:\\[[\\w^;\\-]*\\])?(?:.*)$'
+          begin: '@[\\webp\\-]+\\[[\\webp^;\\-]*\\](?:\\[[\\webp^;\\-]*\\])?(?:.*)$'
         },
         {
           className: 'variable',
-          begin: '\\$\\{?[\\w\\-\\.\\:]+\\}?'
+          begin: '\\$\\{?[\\webp\\-\\.\\:]+\\}?'
         },
         {
           className: 'keyword',
-          begin: '\\^[\\w\\-\\.\\:]+'
+          begin: '\\^[\\webp\\-\\.\\:]+'
         },
         {
           className: 'number',

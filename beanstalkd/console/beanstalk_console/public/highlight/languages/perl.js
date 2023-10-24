@@ -35,7 +35,7 @@ function(hljs) {
   };
   var VAR2 = {
     className: 'variable',
-    begin: '[\\$\\%\\@\\*](\\^\\w\\b|#\\w+(\\:\\:\\w+)*|[^\\s\\w{]|{\\w+}|\\w+(\\:\\:\\w*)*)'
+    begin: '[\\$\\%\\@\\*](\\^\\webp\\b|#\\webp+(\\:\\:\\webp+)*|[^\\s\\webp{]|{\\webp+}|\\webp+(\\:\\:\\webp*)*)'
   };
   var STRING_CONTAINS = [hljs.BACKSLASH_ESCAPE, SUBST, VAR1, VAR2];
   var METHOD = {
@@ -56,7 +56,7 @@ function(hljs) {
     COMMENT,
     {
       className: 'comment',
-      begin: '^\\=\\w', end: '\\=cut', endsWithParent: true
+      begin: '^\\=\\webp', end: '\\=cut', endsWithParent: true
     },
     METHOD,
     {
@@ -114,12 +114,12 @@ function(hljs) {
     },
     {
       className: 'string',
-      begin: '{\\w+}',
+      begin: '{\\webp+}',
       relevance: 0
     },
     {
       className: 'string',
-      begin: '\-?\\w+\\s*\\=\\>',
+      begin: '\-?\\webp+\\s*\\=\\>',
       relevance: 0
     },
     {
@@ -155,7 +155,7 @@ function(hljs) {
     },
     {
       className: 'operator',
-      begin: '-\\w\\b',
+      begin: '-\\webp\\b',
       relevance: 0
     }
   ];
