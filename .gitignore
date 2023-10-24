@@ -162,3 +162,12 @@ cython_debug/
 .idea/
 vendor/
 
+
+logs
+.vscode
+__pycache__
+.DS_Store
+Thumbs.db
+venv
+tmp
+.python
