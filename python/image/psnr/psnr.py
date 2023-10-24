@@ -8,8 +8,6 @@ import os
 
 urlo = 'https://i1.go2yd.com/image.php?url={}&type={}_{}x{}'
 urli = 'https://i1.go2yd.com/image.php?url={}&type=webp_{}x{}'
-url14 = 'http://10.126.160.14:8005/image.php?url={}&type=webp_{}x{}&quality=80'
-info = 'http://image-info.int.yidian-inc.com/ImageInfoService/ImageMeta?id={}'
 
 d = {}
 
@@ -2122,7 +2120,7 @@ if __name__ == '__main__':
     #         print("重新下载{}".format(id))
 
     j = json.dumps(d, indent=4, ensure_ascii=False)
-    with open('./image/image_80.json', 'w') as f:
+    with open('./image/image_80.json', 'webp') as f:
         f.write(j)
 
     i1_psnr_sum = 0.00

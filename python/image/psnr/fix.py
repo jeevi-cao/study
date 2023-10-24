@@ -17,7 +17,7 @@ import os
 #
 # print(len(imn))
 #
-# with open(image2, 'w') as f:
+# with open(image2, 'webp') as f:
 #     f.write(json.dumps(imn, indent=4, ensure_ascii=False))
 
 
