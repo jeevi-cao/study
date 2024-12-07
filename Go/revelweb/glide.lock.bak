@@ -1,8 +1,0 @@
-hash: aa92512994df9e89cd1bfc81613642f5d7a3504fce964e6af6a57a567c93284d
-updated: 2019-01-18T16:59:19.781663+08:00
-imports:
-- name: github.com/revel/cmd
-  version: 149f9f992be9b0957fb1ffeda43c14a123ceb43a
-  subpackages:
-  - revel
-testImports: []
