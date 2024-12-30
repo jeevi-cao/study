@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.jeevic.study</groupId>
+    <artifactId>study-java-demo-pom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>study-java-demo</name>
+    <description>study java demo parent</description>
+
+    <!--
+    parent标签用于引用父工程，在子工程中引用
+
+    1、统一管理jar包的版本，其依赖需要在子工程中定义才有效（比如此例）;
+    2、统一的依赖管理（父工程的<dependencies>，子工程不必重新引入）;
+    3、控制插件的版本;
+    4、聚合工程.-->
+
+    <!--<parent>
+        这是Spring Boot的父级依赖，这样当前的项目就是Spring Boot项目了。
+            spring-boot-starter-parent 是一个特殊的starter，它用来提供相关的Maven默认依赖。
+            使用它之后，常用的包依赖可以省去version标签。&ndash;&gt;
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        查找顺序：relativePath元素中的地址–本地仓库–远程仓库,
+            设定一个空值将始终从仓库中获取，不从本地路径获取&ndash;&gt;
+        <relativePath/>
+    </parent>-->
+    <!--子工程，
+   这里module就是使用到的子模块，他们都收到父模块的版本控制，
+   但是依赖需要自己去导入-->
+    <modules>
+        <!-- 子项目 公共核心类 -->
+        <module>../study-java-springboot-demo</module>
+        <module>../study-java-springboot-demo2</module>
+        <module>../netty-demo</module>
+        <module>../spingboot-starter-demo-autoconfiguration</module>
+    </modules>
+
+    <!--定义属性：properties，以下则设置公用的版本号-->
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<!--?        <springboot.starter.jetty.version>2.7.11</springboot.starter.jetty.version> -->
+    </properties>
+
+
+    <!--他表示对依赖的管理，不注入依赖-->
+    <!--dependencyManagement元素提供了一种管理依赖版本号的方式。
+    在dependencyManagement元素中声明所依赖的jar包的版本号等信息，
+    那么所有子项目再次引入此依赖jar包时则无需显式的列出版本号。
+    Maven会沿着父子层级向上寻找拥有dependencyManagement元素的项目，
+    然后使用它指定的版本号。-->
+    <!--管理依赖版本号，在子工程中无需引入版本号-->
+    <dependencyManagement>
+        <dependencies>
+<!--?            <dependency>-->
+<!--?                <groupId>org.springframework</groupId>-->
+<!--?                <artifactId>spring-web</artifactId>-->
+<!--?                <version>5.3.22</version>-->
+<!--?            </dependency>-->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>utf-8</encoding>
+                    <useDefaultDelimiters>true</useDefaultDelimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+
+    <profiles>
+        <profile>
+            <!-- 开发 -->
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <!-- 测试 -->
+            <id>fat</id>
+            <properties>
+                <activatedProperties>fat</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <!-- 准生产 -->
+            <id>uat</id>
+            <properties>
+                <activatedProperties>uat</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <!-- 生产 -->
+            <id>pro</id>
+            <properties>
+                <activatedProperties>pro</activatedProperties>
+            </properties>
+        </profile>
+    </profiles>
+</project>

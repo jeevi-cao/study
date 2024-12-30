@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.jeevic.study.demo2.dao.FlagMapper">
+    <resultMap id="BaseResultMap" type="Flag">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="flag_name" jdbcType="VARCHAR" property="flagName"/>
+        <result column="flag_title" jdbcType="VARCHAR" property="flagTitle"/>
+        <result column="flag_pool_priority" jdbcType="TINYINT" property="flagPoolPriority"/>
+        <result column="flag_pool_capacity" jdbcType="INTEGER" property="flagPoolCapacity"/>
+        <result column="flag_result_callback_mode" jdbcType="INTEGER" property="flagResultCallbackMode"/>
+        <result column="flag_result_callback_setting" jdbcType="VARCHAR" property="flagResultCallbackSetting"/>
+        <result column="flag_status" jdbcType="INTEGER" property="flagStatus"/>
+        <result column="flag_type" jdbcType="VARCHAR" property="flagType"/>
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt"/>
+        <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt"/>
+
+    </resultMap>
+
+    <!--根据用户名密码查询用户信息-->
+    <!--application.yml 中通过 type-aliases-package 指定了实体类的为了，因此-->
+    <select id="getByFlagId" resultType="Flag">
+        select *
+        from flag
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+</mapper>

@@ -124,7 +124,8 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
+.idea
+.vscode
 # Environments
 .env
 .venv
@@ -158,13 +159,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-
-.idea/
-vendor/
-
+vendor
 
 logs
-.vscode
+
 __pycache__
 .DS_Store
 Thumbs.db
